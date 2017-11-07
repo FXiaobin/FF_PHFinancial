@@ -22,6 +22,9 @@
     [UINavigationBar appearance].backIndicatorImage = [UIImage imageNamed:@"back"];
     [UINavigationBar appearance].backIndicatorTransitionMaskImage = [UIImage imageNamed:@"back"];
     
+   //去除顶部的分割线
+   //[[UITabBar appearance] setShadowImage:[UIImage new]];
+   //[[UITabBar appearance] setBackgroundImage:[[UIImage alloc] init]];
     ///TabBar显示设置
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateNormal];
     UIColor *titleHighlightedColor = kMainColor;
