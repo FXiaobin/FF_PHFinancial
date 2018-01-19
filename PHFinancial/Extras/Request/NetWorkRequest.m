@@ -36,6 +36,16 @@
     }];
 }
 
++ (void)networkReachabilityStatusMonitoring:(void (^) (AFNetworkReachabilityStatus netStatus))block{
+    
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+       
+        block(status);
+       
+    }];
+}
+
 + (AFHTTPSessionManager *)initSessionManager{
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager] ;
