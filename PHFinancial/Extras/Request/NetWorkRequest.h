@@ -14,6 +14,8 @@
 ///网络状态监测
 + (void)networkReachabilityStatusMonitoring;
 
++ (void)networkReachabilityStatusMonitoring:(void (^) (AFNetworkReachabilityStatus netStatus))block;
+
 + (void)POST:(NSString *)urlString parameters:(NSDictionary *)parameters success:(void (^)(id responseObject))success failure:(void (^) (NSError *error))failure;
 
 + (void)GET:(NSString *)urlString parameters:(NSDictionary *)parameters success:(void (^)(id responseObject))success failure:(void (^) (NSError *error))failure;
